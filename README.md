@@ -5,7 +5,7 @@
 
 The [Debian](https://debian.org/) [Buster](https://wiki.debian.org/DebianBuster)
 [container image](https://hub.docker.com/r/mkovac/buster-tf-libvirt/) for use as
-drone.io builder container.
+drone.io terraform builder with libvirt provider container.
 
 # Packages
 
@@ -40,6 +40,7 @@ drone.io builder container.
     ii  fdisk                      2.33.1-0.1                  amd64        collection of partitioning utilities
     ii  findutils                  4.6.0+git+20190209-2        amd64        utilities for finding files--find, xargs
     ii  gcc-8-base:amd64           8.3.0-6                     amd64        GCC, the GNU Compiler Collection (base package)
+    ii  genisoimage                9:1.1.11-3+b2               amd64        Creates ISO-9660 CD-ROM filesystem images
     ii  git                        1:2.20.1-2+deb10u3          amd64        fast, scalable, distributed revision control system
     ii  git-man                    1:2.20.1-2+deb10u3          all          fast, scalable, distributed revision control system (manual pages)
     ii  gnupg                      2.2.12-1+deb10u1            all          GNU privacy guard - a free PGP replacement
@@ -116,6 +117,8 @@ drone.io builder container.
     ii  libldap-common             2.4.47+dfsg-3+deb10u2       all          OpenLDAP common files for libraries
     ii  liblz4-1:amd64             1.8.3-1                     amd64        Fast LZ compression algorithm library - runtime
     ii  liblzma5:amd64             5.2.4-1                     amd64        XZ-format compression library
+    ii  libmagic-mgc               1:5.35-4+deb10u1            amd64        File type determination library using "magic" numbers (compiled magic file)
+    ii  libmagic1:amd64            1:5.35-4+deb10u1            amd64        Recognize the type of data in a file using "magic" numbers - library
     ii  libmnl0:amd64              1.0.4-2                     amd64        minimalistic Netlink communication library
     ii  libmount1:amd64            2.33.1-0.1                  amd64        device mounting library
     ii  libmpdec2:amd64            2.4.2-2                     amd64        library for decimal floating point arithmetic (runtime library)

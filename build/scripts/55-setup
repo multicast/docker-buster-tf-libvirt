@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+set -e
+set -u
+set -x
+export DEBIAN_FRONTEND=noninteractive
+
+git config --global user.email "root@localhost"
+git config --global user.name "root"
+
+## packages sorted alphabeticaly
+##
+packages=""
+packages="${packages} apt-transport-https"
+packages="${packages} ca-certificates"
+packages="${packages} curl"
+packages="${packages} gnupg"
+packages="${packages} jq"
+packages="${packages} libvirt0"
+packages="${packages} lsb-release"
+packages="${packages} make"
+packages="${packages} openssh-client"
+packages="${packages} sudo"
+packages="${packages} unzip"
+packages="${packages} wget"
+
+## install packages
+##
+apt-get install -y --no-install-recommends --auto-remove --purge ${packages}
+
+TFVERSION=${TFVERSION:=0.12.28}
+TFRELEASE=${TFRELEASE:=https://releases.hashicorp.com/terraform/${TFVERSION}/terraform_${TFVERSION}_linux_amd64.zip}
+
+wget -q ${TFRELEASE}
+unzip terraform_${TFVERSION}_linux_amd64.zip
+mv terraform /bin
+
+echo done
