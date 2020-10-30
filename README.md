@@ -18,7 +18,7 @@ drone.io terraform builder with libvirt provider container.
     ii  apt                        1.8.2.1                     amd64        commandline package manager
     ii  apt-transport-https        1.8.2.1                     all          transitional package for https support
     ii  apt-utils                  1.8.2.1                     amd64        package management related utility programs
-    ii  base-files                 10.3+deb10u4                amd64        Debian base system miscellaneous files
+    ii  base-files                 10.3+deb10u6                amd64        Debian base system miscellaneous files
     ii  base-passwd                3.5.46                      amd64        Debian base system master password and group files
     ii  bash                       5.0-4                       amd64        GNU Bourne Again SHell
     ii  bsdutils                   1:2.33.1-0.1                amd64        basic utilities from 4.4BSD-Lite
@@ -86,7 +86,7 @@ drone.io terraform builder with libvirt provider container.
     ii  libcurl3-gnutls:amd64      7.64.0-4+deb10u1            amd64        easy-to-use client-side URL transfer library (GnuTLS flavour)
     ii  libcurl4:amd64             7.64.0-4+deb10u1            amd64        easy-to-use client-side URL transfer library (OpenSSL flavour)
     ii  libdb5.3:amd64             5.3.28+dfsg1-0.5            amd64        Berkeley v5.3 Database Libraries [runtime]
-    ii  libdbus-1-3:amd64          1.12.16-1                   amd64        simple interprocess messaging system (library)
+    ii  libdbus-1-3:amd64          1.12.20-0+deb10u1           amd64        simple interprocess messaging system (library)
     ii  libdebconfclient0:amd64    0.249                       amd64        Debian Configuration Management System (C-implementation library)
     ii  libdevmapper1.02.1:amd64   2:1.02.155-3                amd64        Linux Kernel Device Mapper userspace library
     ii  libedit2:amd64             3.1-20181209-1              amd64        BSD editline and history libraries
@@ -101,7 +101,7 @@ drone.io terraform builder with libvirt provider container.
     ii  libgdbm-compat4:amd64      1.18.1-4                    amd64        GNU dbm database routines (legacy support runtime version) 
     ii  libgdbm6:amd64             1.18.1-4                    amd64        GNU dbm database routines (runtime version) 
     ii  libgmp10:amd64             2:6.1.2+dfsg-4              amd64        Multiprecision arithmetic library
-    ii  libgnutls30:amd64          3.6.7-4+deb10u4             amd64        GNU TLS library - main runtime library
+    ii  libgnutls30:amd64          3.6.7-4+deb10u5             amd64        GNU TLS library - main runtime library
     ii  libgpg-error0:amd64        1.35-1                      amd64        GnuPG development runtime library
     ii  libgssapi-krb5-2:amd64     1.17-3                      amd64        MIT Kerberos runtime libraries - krb5 GSS-API Mechanism
     ii  libhogweed4:amd64          3.4.1-1                     amd64        low level cryptographic library (public-key cryptos)
@@ -139,7 +139,7 @@ drone.io terraform builder with libvirt provider container.
     ii  libpam0g:amd64             1.3.1-5                     amd64        Pluggable Authentication Modules library
     ii  libpcre2-8-0:amd64         10.32-5                     amd64        New Perl Compatible Regular Expression Library- 8 bit runtime files
     ii  libpcre3:amd64             2:8.39-12                   amd64        Old Perl 5 Compatible Regular Expression Library - runtime files
-    ii  libperl5.28:amd64          5.28.1-6                    amd64        shared Perl library
+    ii  libperl5.28:amd64          5.28.1-6+deb10u1            amd64        shared Perl library
     ii  libpopt0:amd64             1.16-12                     amd64        lib for parsing cmdline parameters
     ii  libprocps7:amd64           2:3.3.15-2                  amd64        library for accessing process information from /proc
     ii  libpsl5:amd64              0.20.2-2                    amd64        Library for Public Suffix List (shared libraries)
@@ -148,8 +148,8 @@ drone.io terraform builder with libvirt provider container.
     ii  libpython2.7-minimal:amd64 2.7.16-2+deb10u1            amd64        Minimal subset of the Python language (version 2.7)
     ii  libpython2.7-stdlib:amd64  2.7.16-2+deb10u1            amd64        Interactive high-level object-oriented language (standard library, version 2.7)
     ii  libpython3-stdlib:amd64    3.7.3-1                     amd64        interactive high-level object-oriented language (default python3 version)
-    ii  libpython3.7-minimal:amd64 3.7.3-2+deb10u1             amd64        Minimal subset of the Python language (version 3.7)
-    ii  libpython3.7-stdlib:amd64  3.7.3-2+deb10u1             amd64        Interactive high-level object-oriented language (standard library, version 3.7)
+    ii  libpython3.7-minimal:amd64 3.7.3-2+deb10u2             amd64        Minimal subset of the Python language (version 3.7)
+    ii  libpython3.7-stdlib:amd64  3.7.3-2+deb10u2             amd64        Interactive high-level object-oriented language (standard library, version 3.7)
     ii  libreadline7:amd64         7.0-5                       amd64        GNU readline and history libraries, run-time libraries
     ii  librtmp1:amd64             2.4+20151223.gitfa8646d.1-2 amd64        toolkit for RTMP streams (shared library)
     ii  libsasl2-2:amd64           2.1.27+dfsg-1+deb10u1       amd64        Cyrus SASL - authentication abstraction library
@@ -192,9 +192,9 @@ drone.io terraform builder with libvirt provider container.
     ii  openssh-client             1:7.9p1-10+deb10u2          amd64        secure shell (SSH) client, for secure access to remote machines
     ii  openssl                    1.1.1d-0+deb10u3            amd64        Secure Sockets Layer toolkit - cryptographic utility
     ii  passwd                     1:4.5-1.1                   amd64        change and administer password and group data
-    ii  perl                       5.28.1-6                    amd64        Larry Wall's Practical Extraction and Report Language
-    ii  perl-base                  5.28.1-6                    amd64        minimal Perl system
-    ii  perl-modules-5.28          5.28.1-6                    all          Core Perl modules
+    ii  perl                       5.28.1-6+deb10u1            amd64        Larry Wall's Practical Extraction and Report Language
+    ii  perl-base                  5.28.1-6+deb10u1            amd64        minimal Perl system
+    ii  perl-modules-5.28          5.28.1-6+deb10u1            all          Core Perl modules
     ii  pinentry-curses            1.1.0-2                     amd64        curses-based PIN or pass-phrase entry dialog for GnuPG
     ii  procps                     2:3.3.15-2                  amd64        /proc file system utilities
     ii  psmisc                     23.2-1                      amd64        utilities that use the proc file system
@@ -206,15 +206,15 @@ drone.io terraform builder with libvirt provider container.
     ii  python2.7-minimal          2.7.16-2+deb10u1            amd64        Minimal subset of the Python language (version 2.7)
     ii  python3                    3.7.3-1                     amd64        interactive high-level object-oriented language (default python3 version)
     ii  python3-minimal            3.7.3-1                     amd64        minimal subset of the Python language (default python3 version)
-    ii  python3.7                  3.7.3-2+deb10u1             amd64        Interactive high-level object-oriented language (version 3.7)
-    ii  python3.7-minimal          3.7.3-2+deb10u1             amd64        Minimal subset of the Python language (version 3.7)
+    ii  python3.7                  3.7.3-2+deb10u2             amd64        Interactive high-level object-oriented language (version 3.7)
+    ii  python3.7-minimal          3.7.3-2+deb10u2             amd64        Minimal subset of the Python language (version 3.7)
     ii  readline-common            7.0-5                       all          GNU readline and history libraries, common files
     ii  sed                        4.7-1                       amd64        GNU stream editor for filtering/transforming text
     ii  sensible-utils             0.0.12                      all          Utilities for sensible alternative selection
     ii  sudo                       1.8.27-1+deb10u2            amd64        Provide limited super user privileges to specific users
     ii  sysvinit-utils             2.93-8                      amd64        System-V-like utilities
     ii  tar                        1.30+dfsg-6                 amd64        GNU version of the tar archiving utility
-    ii  tzdata                     2020a-0+deb10u1             all          time zone and daylight-saving time data
+    ii  tzdata                     2020d-0+deb10u1             all          time zone and daylight-saving time data
     ii  ucf                        3.0038+nmu1                 all          Update Configuration File(s): preserve user changes to config files
     ii  unzip                      6.0-23+deb10u1              amd64        De-archiver for .zip files
     ii  util-linux                 2.33.1-0.1                  amd64        miscellaneous system utilities
